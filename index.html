@@ -1,87 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get an inspiring quote from the future !</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Get an inspiring quote !</title>
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <!-- Primary Meta Tags -->
+    <title>Get an inspiring quote !</title>
+    <meta name="title" content="Get an inspiring quote from the future !" />
+    <meta
+      name="description"
+      content="This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!"
+    />
 
-  <!-- Primary Meta Tags -->
-  <title>Get an inspiring quote !</title>
-  <meta name="title" content="Get an inspiring quote !" />
-  <meta name="description"
-    content="This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qquote.netlify.app/" />
+    <meta
+      property="og:title"
+      content="Get an inspiring quote from the future !"
+    />
+    <meta
+      property="og:description"
+      content="This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!"
+    />
+    <meta property="og:image" content="https://i.ibb.co/HfMhnj10/image.png" />
+    <meta
+      property="og:image:url"
+      content="https://i.ibb.co/HfMhnj10/image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="614" />
+    <meta
+      property="og:image:secure_url"
+      content="https://i.ibb.co/HfMhnj10/image.png"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://qquote.netlify.app/" />
-  <meta property="og:title" content="Get an inspiring quote !" />
-  <meta property="og:description"
-    content="This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!" />
-  <meta property="og:image" content="https://i.ibb.co/bb7cjMF/og.jpg" />
-  <meta property="og:image:url" content="https://i.ibb.co/bb7cjMF/og.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="614" />
-  <meta property="og:image:secure_url" content="https://i.ibb.co/bb7cjMF/og.jpg" />
+    <!-- ?Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://qquote.netlify.app/" />
+    <meta
+      name="twitter:title"
+      content="Get an inspiring quote  from the future!"
+    />
+    <meta
+      name="twitter:description"
+      content="This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!"
+    />
+    <meta name="twitter:image" content="https://i.ibb.co/HfMhnj10/image.png" />
+    <!-- end of the open graph meta stuff -->
 
-  <!-- ?Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://qquote.netlify.app/" />
-  <meta name="twitter:title" content="Get an inspiring quote !" />
-  <meta name="twitter:description"
-    content="This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!" />
-  <meta name="twitter:image" content="https://i.ibb.co/bb7cjMF/og.jpg" />
-  <!-- end of the open graph meta stuff -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="scripts.js"></script>
-</head>
+  <body class="bg-black text-cyan-400 font-mono overflow-hidden">
+    <div
+      class="fixed inset-0 bg-[url('https://wallpapercave.com/wp/wp2732619.jpg')] bg-cover bg-center opacity-40 grayscale-[0.5]"
+    ></div>
 
-<body>
-  <div class="background-shapes">
-    <div class="shape shape-square"></div>
-    <div class="shape shape-square"></div>
-    <div class="shape shape-square"></div>
-    <div class="shape shape-circle"></div>
-    <div class="shape shape-circle"></div>
-    <div class="shape shape-circle"></div>
-    <div class="shape shape-triangle"></div>
-    <div class="shape shape-triangle"></div>
-    <div class="shape shape-triangle"></div>
-    <div class="shape shape-square"></div>
-    <div class="shape shape-circle"></div>
-    <div class="shape shape-triangle"></div>
-    <div class="shape shape-hexagon"></div>
-    <div class="shape shape-hexagon"></div>
-    <div class="shape shape-hexagon"></div>
-  </div>
-  <div class="container">
-    <h1>INSPIRING QUOTES!</h1>
-    <div class="quote-container">
-      <p id="quote" class="quote-text">
-        Click the button for an awesome quote :)
-      </p>
-      <p id="author" class="quote-author">- Ashref</p>
-      <button class="gradient-button copy-quote" onclick="copyContent()">
-        <img src="./copy.png" alt="copy"
-          srcset="" style="width:max(2vw,15px);filter:invert();">
-      </button>
-      <div class="popper-boi">copied !</div>
-    </div>
-    <div>
-      <button id="new-quote" onclick="getQuote()" class="gradient-button">
-        Inspire me
-      </button>
-      <a href="https://ashref.tn/" target="_blank" style="
-            text-decoration: none;
-            z-index: 10;
-            font-size: 1.2em;
-            color: black;
-          ">
-        <p>www.ashref.tn 👋</p>
-      </a>
-    </div>
-  </div>
-</body>
+    <div
+      class="fixed inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,118,0.03))] bg-[length:100%_2px,3px_100%]"
+    ></div>
+
+    <main
+      class="relative z-10 h-screen flex flex-col items-center justify-center p-4"
+    >
+      <div
+        class="w-full max-w-2xl backdrop-blur-md bg-black/40 border-t border-l border-cyan-500/50 rounded-2xl p-8 shadow-[20px_20px_50px_rgba(0,0,0,0.5)] border-r-2 border-b-2 border-cyan-400/20 relative overflow-hidden group"
+      >
+        <header class="mb-8 text-center">
+          <h1 class="text-xs uppercase tracking-[0.5em] text-cyan-300/70 mb-2">
+            Neural Quote Interface v2.0
+          </h1>
+          <div
+            class="h-[1px] w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          ></div>
+        </header>
+
+        <div
+          class="min-h-[150px] flex flex-col justify-center items-center text-center px-4"
+        >
+          <p
+            id="quote"
+            class="text-2xl md:text-3xl font-light tracking-wide leading-relaxed text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+          >
+            “Initializing inspiration protocol...”
+          </p>
+          <p
+            id="author"
+            class="mt-6 text-sm italic text-cyan-400/80 tracking-widest uppercase drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+          >
+            — System
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-6">
+          <button
+            onclick="copyContent()"
+            class="group relative px-6 py-2 border border-cyan-500/50 hover:bg-cyan-500/20 transition-all duration-300 rounded-sm overflow-hidden"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] uppercase tracking-tighter"
+                >Copy Link</span
+              >
+            </div>
+            <span
+              class="popper-boi absolute -top-8 left-1/2 -translate-x-1/2 bg-cyan-500 text-black text-[10px] px-2 py-1 rounded opacity-0 transition-opacity"
+              >COPIED</span
+            >
+          </button>
+
+          <button
+            id="new-quote"
+            onclick="getQuote()"
+            class="relative px-8 py-3 bg-cyan-500 text-black font-bold uppercase tracking-tighter hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.6)] transition-all duration-300 clip-path-polygon"
+          >
+            Generate New Quote
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col">
+        <a
+          href="https://github.com/RamOfFate"
+          target="_blank"
+          class="text-[10px] tracking-[0.3em] text-cyan-500/50 hover:text-cyan-400 transition-colors uppercase"
+        >
+          current admin: Ram
+        </a>
+        <a
+          href="https://ashref.tn/"
+          target="_blank"
+          class="text-[10px] tracking-[0.3em] text-cyan-500/50 hover:text-cyan-400 transition-colors uppercase"
+        >
+          original owner: ashref.tn
+        </a>
+      </div>
+    </main>
+
+    <style>
+      .clip-path-polygon {
+        clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 30%);
+      }
+      .popper-boi-show {
+        opacity: 1 !important;
+      }
+    </style>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 // API endpoint link to pass to the fetch request
-const url = "https://api.quotable.io/random";
+const url = "/api/get-quote";
 
 // Sending a GET request to the API
 let getQuote = () => {
@@ -7,8 +7,8 @@ let getQuote = () => {
     .then((response) => response.json())
     .then((data) => {
       // Extracting the quote and author from the data
-      const quote = data.content;
-      const author = data.author;
+      const quote = data[0].quote;
+      const author = data[0].author;
 
       // Displaying the quote and author on the website
       document.getElementById("quote").innerHTML = `“${quote}”`;
@@ -17,20 +17,21 @@ let getQuote = () => {
     .catch((error) => console.error(error));
 };
 
-
 const copyContent = async () => {
-  let text = document.getElementById('quote').innerHTML + document.getElementById("author").innerHTML;
+  let text =
+    document.getElementById("quote").innerHTML +
+    document.getElementById("author").innerHTML;
   try {
     await navigator.clipboard.writeText(text);
-    console.log('Content copied to clipboard');
+    console.log("Content copied to clipboard");
     showTooltip();
   } catch (err) {
-    console.error('Failed to copy: ', err);
+    console.error("Failed to copy: ", err);
   }
-}
+};
 
 let tool = document.querySelector(".popper-boi");
 let showTooltip = () => {
   tool.classList.add("popper-boi-show");
-  setTimeout(() => (tool.classList.remove("popper-boi-show")), 1200);
-}
+  setTimeout(() => tool.classList.remove("popper-boi-show"), 1200);
+};
