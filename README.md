@@ -1,14 +1,14 @@
-# Awesome Quote Generator
+# Futuristic Quote Generator
 
-Welcome to the Awesome Quote Generator repository! 🌟
+Welcome to the Awesome Futuristic Quote Generator repository! 🌟
 
 
-<img src="https://i.ibb.co/bb7cjMF/og.jpg" alt="qquote site" width="50%" height="50%" style="display"/>
+<img src="https://i.ibb.co/HfMhnj10/image.png" alt="qquote site" width="50%" height="50%" style="display"/>
 
 
 ## About
 
-This awesome quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!
+This awesome futuristic quote generator is a cool and well-designed website that provides random quotes to uplift and inspire visitors. Whether you're seeking motivation, a moment of reflection, or simply some words of wisdom, this site has got you covered!
 
 ## Features
 
@@ -21,7 +21,7 @@ This awesome quote generator is a cool and well-designed website that provides r
 
 Using the Awesome Quote Generator is a breeze:
 
-1. Simply visit the website at [qquote.netlify.app](https://qquote.netlify.app/).
+1. Simply visit the website at [my-futuristic-quote-generator](https://my-futuristic-quote-generator.vercel.app/).
 2. Click the "Inspire me" button, a captivating quote will be displayed to enlighten your day.
 3. Feel free to click the button again to get a fresh dose of inspiration whenever you need it.
 4. If a quote strikes a chord with you (hopefully major), click on the "Copy" button to spread the wisdom with your friends.
@@ -37,8 +37,8 @@ We encourage you to contribute to the Awesome Quote Generator and make it even b
 We believe that everyone can benefit from a little bit of positivity and inspiration. Join us in spreading joy, one quote at a time!
 
 ### Things to note about this project:
-
-- CSS max() is EPIC !
-- The CSS :nth-child selector is a lifesaver !
+- This is a forked repository from [MyQuoteGenerator](https://github.com/Ashref-dev/MyQuoteGenerator)
+- I replaced the Quotable api with Api Ninja
+- Sa7a [Ashref](https://github.com/Ashref-dev)
 
 Let's make the world a better place together. Happy quoting! ✨✨✨
